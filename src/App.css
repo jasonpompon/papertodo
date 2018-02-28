@@ -16,22 +16,6 @@
   7px 7px 0px rgba(0, 0, 0, 0.05);
 }
 
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
-}
-
-.App-title {
-  font-size: 1.5em;
-}
-
-.App-intro {
-  font-size: large;
-}
-
-
 /*** MOBILE STYELS ***/
 
 @media screen and (max-width: 680px) {
