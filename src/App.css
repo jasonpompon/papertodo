@@ -3,11 +3,17 @@
   background-color: #FAF5D4;
   height: 100vh;
   color: #000F55;
+  max-width: 950px;
+  margin: 0 auto;
 }
 
 .App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+  font: 400 70px/1.5 'Pacifico',
+  Helvetica,
+  sans-serif;
+  color: #2b2b2b;
+  text-shadow: 3px 3px 0px rgba(0, 0, 0, 0.1),
+  7px 7px 0px rgba(0, 0, 0, 0.05);
 }
 
 .App-header {
@@ -25,7 +31,11 @@
   font-size: large;
 }
 
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+
+/*** MOBILE STYELS ***/
+
+@media screen and (max-width: 680px) {
+  .App-logo {
+    font-size: 50px;
+  }
 }

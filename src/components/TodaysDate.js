@@ -3,27 +3,19 @@ import "./TodaysDate.css";
 
 class TodaysDate extends React.Component {
   
-  getDate() {
+   getDate() {
+
     var today = new Date();
     var dd = today.getDate();
-    var mm = today.getMonth() + 1; //January is 0!
     var yyyy = today.getFullYear();
+    var day = today.getDay() + 1;
 
-    var month = new Array();
-    month[0] = "January";
-    month[1] = "February";
-    month[2] = "March";
-    month[3] = "April";
-    month[4] = "May";
-    month[5] = "June";
-    month[6] = "July";
-    month[7] = "August";
-    month[8] = "September";
-    month[9] = "October";
-    month[10] = "November";
-    month[11] = "December";
+    var month = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
     var monthInWord = month[today.getMonth()];
 
+    var days = ["Mon", "Tues", "Wed", "Thu", "Fri", "Sat", "Sun"];
+    var dayInWord = days[today.getDay() - 1];
+    
     function ordinal_suffix_of(i) {
       var j = i % 10,
         k = i % 100;
@@ -39,19 +31,12 @@ class TodaysDate extends React.Component {
         return i + "th";
     }
 
-    if (dd < 10) {
-      dd = "0" + dd;
-    }
 
-    if (mm < 10) {
-      mm = "0" + mm;
-    }
-
-    today = ordinal_suffix_of(dd) + " " + monthInWord + " " + yyyy;
+    today = dayInWord + " " + ordinal_suffix_of(dd) + " " + monthInWord + " " + yyyy;
 
     return today;
-  }
-  
+  };
+
   render() {
     return <h1>{this.getDate()}</h1>;
   }
